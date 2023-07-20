@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie's</title>
+    <link rel="stylesheet" href="/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=a998ffedb0e4da752e40c0d3ad4e01fa&page=1">Logo</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="mynavbar">
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=a998ffedb0e4da752e40c0d3ad4e01fa&page=1">POPULAR</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://api.themoviedb.org/3/discover/movie?sort_by=vote_average.desc&api_key=a998ffedb0e4da752e40c0d3ad4e01fa&page=1">TOP RATED</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://api.themoviedb.org/3/discover/movie?sort_by=vote_average.desc&api_key=a998ffedb0e4da752e40c0d3ad4e01fa&page=1">UPCOMING</a>
+              </li>
+            </ul>
+            <form id="form" class="d-flex">
+              <input id="search" class="form-control btn-secondary me-2" type="text" placeholder="Search">
+            </form>
+          </div>
+        </div>
+    </nav>
+    <main id="main">
+    </main>
+    <div id="changePage" class="row">
+      <button id="previousPage" class="btn btn-secondary btn-outline-dark col-md-4 button hidden">Previous</button>
+      <button id="nextPage" class="btn btn-secondary btn-outline-dark col-md-4 button">Next</button>
+    </div>
+    <footer>
+      <div id="footer-container" class="row bg-dark p-2 mt-2">     
+        <div id="copy-right" class="col-sm-6">
+          <h4 class="thanks">thanks for visting my website</h4>
+          <p>For more. Follow me in social media</p>
+        </div>
+        <div id="contact" class="col-sm-6">
+          <ul class="contact-list-container">
+            <li>
+              <a href="">
+                <i class="fab fa-lg fa-facebook-f"></i>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <i class="fab fa-lg fa-twitter"></i>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <i class="fab fa-lg fa-instagram"></i>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <i class="fab fa-lg fa-github"></i>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <i class="fa fa-lg fa-regular fa-envelope"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <script src="/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="/bootstrap/bootstrap.esm.min.js"></script>
+    <script src="/bootstrap/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
