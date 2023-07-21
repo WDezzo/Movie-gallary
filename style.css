@@ -10,6 +10,9 @@ body{
 .btn-gray{
     background-color: #505050;
 }
+.nav-link{
+    cursor: pointer;
+}
 #search:focus{
 box-shadow: 0 0 0 0.25rem rgba(90, 90, 90, 0.74);
 }
