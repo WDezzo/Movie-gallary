@@ -22,6 +22,9 @@ box-shadow: 0 0 0 0.25rem rgba(90, 90, 90, 0.74);
 #search::placeholder{
     color: #000;
 }
+.icon{
+    width: 32px;
+}
 main{
     padding-top: 1rem;
     display: flex;

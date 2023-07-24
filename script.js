@@ -4,7 +4,7 @@ let page = 1;
 const apiKey = 'a998ffedb0e4da752e40c0d3ad4e01fa';
 const apiUrl = `https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=${apiKey}&page=${page}`;
 const imgPath= 'https://image.tmdb.org/t/p/w1280';
-const searchApi=`https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query"`;
+const searchApi=`https://api.themoviedb.org/3/search/movie?api_key=a998ffedb0e4da752e40c0d3ad4e01fa&query="`;
 
 const logo = document.getElementById('logo')
 const popular = document.getElementById('POPULAR');
@@ -37,7 +37,7 @@ topRated.addEventListener('click',(event)=>{
 });
 upcoming.addEventListener('click',(event)=>{
         page = 1;
-        getMovies(`https://api.themoviedb.org/3/discover/movie?sort_by=vote_average.desc&api_key=${apiKey}&page=${page}`);
+        getMovies(`https://api.themoviedb.org/3/movie/upcoming?api_key=a998ffedb0e4da752e40c0d3ad4e01fa&page=${page}`);
 });
 
 // change page
@@ -63,7 +63,6 @@ previous.addEventListener('click',(event)=>{
 async function getMovies(url){
     const res = await fetch(url);
     const data = await res.json();
-    fetchData = data.results;
     showMovies(data.results);
 }
 
@@ -104,8 +103,10 @@ function getClassByRate(vote){
 form.addEventListener('submit', (e)=>{
     e.preventDefault();
     const searchTerm = search.value;
+    console.log(search.value)
     if(searchTerm && searchTerm !== ''){
         getMovies(searchApi + searchTerm);
+        console.log(getMovies(searchApi + searchTerm));
         search.value = '';
     }else{
         window.location.reload();
